@@ -53,6 +53,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          blogTitle: 'Post',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -91,7 +92,8 @@ const config = {
           },
           { to: '/blog',
             label: 'Post',
-            position: 'left'},
+            position: 'left',
+          },
           {
             to: 'eol',
             position: 'left',
