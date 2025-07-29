@@ -1,40 +1,40 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import Translate, {translate} from "@docusaurus/Translate";
+import Translate, {translate} from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: translate({id: 'homepage.feature.carpet.message', message: '大量特性'}),
+    title: translate({id: 'homepage.feature.features.message', message: 'More Features'}),
     Svg: require('@site/static/img/toolbox.svg').default,
     description: (
       <>
-          <Translate id="homepage.feature.carpet.description">
-              REMS-Carpet-Addition 移植了大量的老版特性，
-              让高版本焕发第二春
+          <Translate id="homepage.feature.features.description">
+              REMS Carpet Addition has ported many features
+              of the previous version to a higher version,
+              aiming to achieve a better gaming condition.
           </Translate>
       </>
     ),
   },
   {
-    title: translate({id: 'homepage.feature.vanilla.message', message: '原版'}),
+    title: translate({id: 'homepage.feature.vanilla.message', message: 'Keep vanilla'}),
     Svg: require('@site/static/img/vanilla.svg').default,
     description: (
       <>
           <Translate id="homepage.feature.vanilla.description">
-              REMS-Carpet-Addition 不会自行修改游戏的原版机制,
-              除非用户显式配置启动了某些特性. 让 Minecraft 保持原版
+              The REMS Carpet Addition does not actively change the vanilla behavior of the game.
           </Translate>
       </>
     ),
   },
   {
-    title: translate({id: 'homepage.feature.compatible.message', message: '兼容'}),
+    title: translate({id: 'homepage.feature.friend.message', message: 'Friend with other'}),
     Svg: require('@site/static/img/puzzle.svg').default,
     description: (
       <>
-          <Translate id="homepage.feature.compatible.description">
-              几乎不会与其它mod产生冲突
+          <Translate id="homepage.feature.friend.description">
+              The REMS Carpet Addition does not actively change the vanilla behavior of the game.
           </Translate>
       </>
     ),

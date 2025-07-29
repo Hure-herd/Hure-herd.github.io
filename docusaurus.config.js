@@ -11,8 +11,13 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'REMS Carpet Addition',
-  tagline: '',
+  tagline: 'A Carpet Mod extension for recall features',
   favicon: 'img/icon.png',
+
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
 
   // Set the production url of your site here
   url: 'https://Hure-herd.github.io',
@@ -22,8 +27,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Hureherd', // Usually your GitHub org/user name.
-  projectName: 'Rems-Carpet', // Usually your repo name.
+  organizationName: 'Hure-herd', // Usually your GitHub org/user name.
+  projectName: 'REMS Carpet Addition', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -32,8 +37,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans', 'en'],
+    defaultLocale: 'en',
+    locales: ['en','zh-Hans'],
   },
 
   presets: [
@@ -42,11 +47,22 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js'
+          sidebarPath: './sidebars.js',
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
         },
         blog: {
-          blogTitle: '文章',
-          blogDescription: 'Hello World!'
+          showReadingTime: true,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -61,9 +77,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/icon.png',
       navbar: {
-        title: 'REMS-Carpet-Addition',
+        title: 'REMS Carpet Addition',
         logo: {
-          alt: 'REMS-Carpet-Addition Logo',
+          alt: 'REMS Carpet Addition Logo',
           src: 'img/icon.png',
         },
         items: [
@@ -71,20 +87,18 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: '文档',
+            label: 'Documents',
           },
           { to: '/blog',
-            position: 'left',
-            label: '文章'
-          },
-          {
-            type: 'localeDropdown',
-            position: 'right'
-          },
+            label: 'Post',
+            position: 'left'},
           {
             to: 'eol',
             position: 'left',
-            label: '生命周期终点'
+            label: 'EOL'
+          },{
+              type: "localeDropdown",
+              position:"right",
           },
           {
             href: 'https://github.com/Hure-herd/REMS-Carpet-Addition',
@@ -94,45 +108,46 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
-            title: '模组下载',
+            title: 'Download',
             items: [
+              {
+                label: 'Github Releases',
+                to: 'https://github.com/Hure-herd/REMS-Carpet-Addition/releases',
+              },
               {
                 label: 'Modrinth',
                 to: 'https://modrinth.com/mod/rems-carpet-addition',
               },
+            ],
+          },
+          {
+            title: 'Link',
+            items: [
               {
                 label: 'Github',
-                to: 'https://github.com/Hure-herd/REMS-Carpet-Addition/releases',
-              }
-            ],
-          },
-          {
-            title: '相关项目',
-            items: [
-              {
-                label: 'Fabric Carpet',
-                to: 'https://github.com/gnembon/fabric-carpet',
+                href: 'https://github.com/Hure-herd/REMS-Carpet-Addition',
               },
               {
-                label: 'Docusaurus',
-                to: 'https://docusaurus.io/',
-              }
+                label: 'Discord',
+                href: 'https://discord.gg/MBEJatefbz',
+              },
             ],
           },
           {
-            title: '网站源码',
+            title: 'Friend Projects',
+
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/Hure-herd/Hure-herd.github.io',
+                label: 'Crystal Carpet Addition',
+                to: 'https://crystal0404.github.io/cca-doc/docs/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Hureherd, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} REMS Server, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

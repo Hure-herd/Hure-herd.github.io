@@ -1,8 +1,8 @@
 ---
-title: 在1.21.5+如何实现CCE和IAE
+title: How to implement CCE and IAE in 1.21.5+
 ---
 
-### 在1.21.5-的AbstractBlock的java文件里
+### In the java file of AbstractBlock of 1.21.5-
 ```java
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
     if (state.hasBlockEntity() && !state.isOf(newState.getBlock())) {
@@ -10,13 +10,14 @@ title: 在1.21.5+如何实现CCE和IAE
     }
 }
 ```
-### 在1.21.5+的AbstractBlock的java文件里
+<!-- truncate -->
+### In the java file of AbstractBlock of 1.21.5+
 ```java
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {}
 ```
-我们对比可以得到，我们不再调用
+We can get it by comparison, we no longer call
 ```
 world.removeBlockEntity(pos);
 ```
-也就是说在我们不知道的地方，游戏进行了一次方块实体的删除或者核对？ 我暂时不想深挖，于是我采取了比较取巧的一个方法。  
-我们可以在更新抑制发出异常的时候进行对LecternBlock和SculkSensorBlock标记，在我们挖掉LecternBlock和SculkSensorBlock的时候再次标记。进行对比，如果满足两个条件的情况下，在我们放置新的含有方块实体的方块时，我手动进行删除方块实体，并且给它添加一个方块实体，完成CCE和IAE的功能。
+In other words, the game deleted or checked the block entity in a place we didn't know about? I don't want to dig deep for now, so I took a tricky approach.  
+We can mark LecternBlock and SculkSensorBlock when the update suppression issues an exception, and mark them again when we remove LecternBlock and SculkSensorBlock. For comparison, if both conditions are met, when we place a new block containing a block entity, I manually delete the block entity and add a block entity to it to complete the functions of CCE and IAE.

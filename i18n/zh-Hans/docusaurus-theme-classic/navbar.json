@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "REMS Carpet Addition",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "REMS Carpet Addition Icon",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Documents": {
+    "message": "文档",
+    "description": "Navbar item with label Documents"
+  },
+  "item.label.Post": {
+    "message": "文章",
+    "description": "Navbar item with label Posts"
+  },
+  "item.label.EOL": {
+    "message": "生命周期倒计时",
+    "description": "Navbar item with label EOL"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

@@ -2,11 +2,11 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import Translate, {translate} from '@docusaurus/Translate';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-import Translate from "@docusaurus/Translate";
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -18,15 +18,15 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">
             <Translate id="homepage.header.subtitle">
-                一个 Carpet 模组（fabric-carpet）的扩展, 包含一些有趣的功能
+                A Carpet Mod extension for recall features
             </Translate>
         </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/">
-              <Translate id='homepage.header.rtd'>
-                  阅读文档
+            to="/docs">
+              <Translate id="homepage.header.rtd">
+                  Read the documents
               </Translate>
           </Link>
         </div>
@@ -39,6 +39,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
+      title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>

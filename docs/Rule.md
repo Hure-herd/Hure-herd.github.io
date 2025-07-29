@@ -1,213 +1,236 @@
 ---
 sidebar_position: 1
 ---
-# 规则列表
+
+# Rule
 
 ---
 
-## 活塞头加载(PistonBlockChunkLoader)
-开启后，当该活塞/黏性活塞头产生活塞头的推出/拉回事件时，在创建推出/拉回事件的那一游戏刻为**活塞头方块所在区块**添加类型为"piston_block"的加载票，持续时间为60gt（3s）。
-#### 在任何维度，活塞上方有钻石矿时可以弱加载1x1的区块
-#### 在地狱下方有基岩，后一格上方是红石火把时可以弱加载1x1的区块
-#### 当有5X5的弱加载区块的时候，最中心的区块会变成强加载区块
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet pistonBlockChunkLoader ture`
-* 分类: `REMS` , `Survival`
-> 如果不想使用地狱门加载链的话，此规则可作为替代方案。
+## PistonBlockChunkLoader
+If enabled, when this piston/sticky piston head generates a piston head push/pull event, a load ticket of type "piston_block" is added to the chunk where the piston head block is located at the game tick that created the push/pull event, with a duration of 60gt (3s).
+#### In any dimension, a diamond ore can be weakly loaded into a 1x1 Active chunk above a piston.
+#### If there is bedrock below the netherworld and a redstone torch above the next block, a 1x1 block can be lazy loaded.
+#### When there are 5X5 weak loading chunks, the central chunk will become a Active loading chunk
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet pistonBlockChunkLoader ture`
+* Categories: `REMS` , `Survival`
 
-## 更好的TNT合并(MergeTNTPro)
-合并大量TNT以减小实体及爆炸带来的卡顿，能显著降低mspt
+>This rule can be used as an alternative if you do not want to use the Nether portal Load.
 
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet mergeTNTPro true`
-* 分类: `REMS`, `Feature`, `Survival`,`TNT`
+## MergeTNTPro
+Merging a large amount of TNT to reduce the lag caused by entities and explosions can significantly reduce mspt
 
-## 末影珍珠加载(PearlTickets)<sup>`MC < 1.21.5`</sup>
-这个规则允许末影珍珠实体选择性地加载即将通过的区块，这样珍珠炮打出的珍珠就不会因为进入未加载区块而丢失。在1.14+中可以替代地狱门加载链使用。   
-该mod相比于@gnembon/carpet-extra mod的enderPearlChunkLoading功能有显著的性能提升。  
-(Minecraft>=1.21.2时开启后，可以显著提升珍珠炮的性能)
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet pearlTickets true`
-* 分类: `REMS` , `Survival`
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet mergeTNTPro true`
+* Categories: `REMS`, `Feature`, `Survival`,`TNT`
 
-**移植自：**
-SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
+## PearlTickets<sup>`MC < 1.21.5`</sup>
+This mod allows ender pearl entities to selectively load chunks that they are about to pass through, so that pearls fired by the pearl cannon will not be lost due to entering unloaded chunks. It can be used instead of the nether portal loading chain in 1.14+.
+This mod has a significant performance improvement over the enderPearlChunkLoading function of @gnembon/carpet-extra mod.  
+(When enabled in Minecraft>=1.21.2, it can significantly improve the performance of the Pearl Cannon)
 
-## 末影真实位置(PearlPosVelocity)
-在开启末影珍珠加载(PearlTickets)的时候，珍珠只会显示第一gt的位置，查看不到珍珠的真实位置和速度，开启这个后，会在公屏显示出来。
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet pearlPosVelocity true`
-* 分类: `REMS` , `Survival`
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet pearlTickets true`
+* Categories: `REMS` , `Survival`
 
-## 末地石农场(Endstonefram)
-你可以像1.16一样建造末地石农场，这个规则可以让他工作
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet endstonefram true`
-* 分类: `REMS` , `Experimental`
+**Ported from：**
+SunnySlopes's [PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 
-## 投掷物Raycast长度(ProjectileRaycastLength)
-更改Raycast的距离。如果设置为0，将检查所有到达目的地的块。  
-这减少了快速移动的延迟。在1.12中该值为200。
-* 默认值: `0`
-* 可选参数: `0`, `200`
-* 开启方法: `/carpet ProjectileRaycastLength 200`
-* 分类: `REMS` , `Survival`
+## Soundsuppression<sup>`MC > 1.21.1`</sup>
+Keep the block entity data of the calibrated hidden sensor to any blcok that is blockentity
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet soundsuppression true`
+* Categories: `REMS` , `Feature`
 
-**移植自：**[EpsilonSMP](https://github.com/EpsilonSMP/Epsilon-Carpet)
+## SoundSuppressionRadius<sup>`MC > 1.19.4`</sup>
+Controls the monitoring radius of the sound suppressor. You can enter a positive integer. The default value in the original version is 16 grids.The maximum value cannot exceed 32.
+* Default Value:  `false`
+* Optional Parameters: `8`,`16`,`32`
+* Open Method: `/carpet soundSuppressionRadius true`
+* Categories: `REMS` , `Feature`
 
-## 声音抑制移植(Soundsuppression)<sup>`MC > 1.21.1`</sup>
-将校准幽匿感测体的方块实体数据保留到任何拥有方块数据的方块
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet soundsuppression true`
-* 分类: `REMS` , `Feature`
+## Commandsetnoisesuppressor<sup>`MC > 1.19.4`</sup>
+Enables /setnoisesuppressor command to place a sound suppressor
+* Default Value:  `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet commandsetnoisesuppressor true`
+* Categories: `REMS` , `CREATIVE`
 
-## 声音抑制器范围控制(SoundSuppressionRadius)<sup>`MC > 1.19.4`</sup>
-控制声音抑制器的监听范围半径，可输入一个正整数，原版默认为16格，最大不能超过32
-* 默认值: `false`
-* 可选参数: `8`,`16`,`32`
-* 开启方法: `/carpet soundSuppressionRadius true`
-* 分类: `REMS` , `Feature`
+## ComparatorIgnoresStateUpdatesFromBelow<sup>`MC >= 1.20.2`</sup>
+When this option is turned on, the comparator ignores state updates from below.  
+Means that opening the trap gate will not destroy the comparator
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet ComparatorIgnoresStateUpdatesFromBelow true`
+* Categories: `REMS` , `Feature`
 
-## 放置声音抑制器命令开关(Commandsetnoisesuppressor)<sup>`MC > 1.19.4`</sup>
-启用/setnoisesuppressor命令来放置声音抑制器
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet commandsetnoisesuppressor true`
-* 分类: `REMS` , `CREATIVE`
+## PearlPosVelocity
+When the ender pearl loading (PearlTickets) is turned on, the pearl will only show the position of the first gt, and the real position and speed of the pearl cannot be checked. After turning this on, it will be displayed on the public screen.
 
-## 比较器忽略来自下方的状态更新(ComparatorIgnoresStateUpdatesFromBelow)<sup>`MC >= 1.20.2`</sup>
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet pearlPosVelocity true`
+* Categories: `REMS` , `Survival`
 
-比较器会忽略来自下方的状态更新,意味着开启活板门不会破坏比较器
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet ComparatorIgnoresStateUpdatesFromBelow true`
-* 分类: `REMS` , `Feature`
+## Endstonefram
+You can build Endstonefram like 1.16,it can make it work
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet endstonefram true`
+* Categories: `REMS` , `Experimental`
 
-## 珍珠超传(PortalPearlWarp)
-可以在某些特定的位置触发超传。  
-下面是地狱门的位置，都是正正或者负负
+## ProjectileRaycastLength
+Changes the distance of the Raycast. If set to 0, all chunks will be checked to reach the destination.
+This reduces lag for fast travel. In 1.12 this value is 200.
 
-| 地狱传送门位置（正中央)  |   主世界传送门位置（正中央)    |
-|:-------------:|:------------------:|
-|    915,915    | 29999600,29999600  |
-|   7324,7324   |  3749942,3749942   |
-|  58592,58592  |   468735,468735    |
-| 468743,468743 |   58585,58585      |
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet PortalPearlWarp true`
-* 分类: `REMS` , `Feature`
+* Default Value: `0`
+* Optional Parameters: `0`, `200`
+* Open Method: `/carpet ProjectileRaycastLength 200`
+* Categories: `REMS` , `Survival`
 
-## 箱子矿车加载区块(ChestMinecartChunkLoader)
-箱子矿车可以强加载1x1的区块持续2s,当箱子矿车的名字是Load时生效。
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet chestMinecartChunkLoader true`
-* 分类: `REMS` , `Feature`
+**Ported from：**[EpsilonSMP](https://github.com/EpsilonSMP/Epsilon-Carpet)
 
-## 末地折跃门加载(EndGatewayChunkLoader)<sup>`MC < 1.21`</sup>
-当实体穿越末路之地折跃门时，目标区块会像下界传送门一样使目标区块获得3s的加载。
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet endGatewayChunkLoader true`
-* 分类: `REMS` , `Survival`
+## PortalPearlWarp
+You can trigger a supertransmission at certain locations.
+Below are the locations of the Hell Gates, all positive or negative.
 
-## 计划刻催熟植物(ScheduledRandomTickPlants)
-可以让计划刻事件触发以下所有植物的随机刻生长行为，用于恢复1.15版本的强制催熟特性。  
-仙人掌、竹子、紫颂花、甘蔗、海带、缠怨藤、垂泪藤
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet scheduledRandomTickPlants true`
-* 分类: `REMS` , `Feature`,`Survival`
+| Nether portal location (center) | Overworld portal location (center) |
+|:-------------------------------:|:----------------------------------:|
+|             915,915             |         29999600,29999600          |
+|            7324,7324            |          3749942,3749942           |
+|           58592,58592           |           468735,468735            |
+|          468743,468743          |            58585,58585             |
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet PortalPearlWarp true`
+* Categories: `REMS` , `Feature`
+
+## ChestMinecartChunkLoader
+A chest minecart can force load a 1x1 chunk for 2 seconds. This is enabled when the chest minecart's name is Load.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet chestMinecartChunkLoader true`
+* Categories: `REMS` , `Feature`
+
+## EndGatewayChunkLoader<sup>`MC < 1.21`</sup>
+When an entity passes through the End gateway, the target chunk will be loaded for 3 seconds like a nether portal.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet endGatewayChunkLoader true`
+* Categories: `REMS` , `Survival`
+
+## ScheduledRandomTickPlants
+
+The planned tick event can trigger the random tick growth behavior of all the following plants, which is used to restore the forced ripening feature of version 1.15.
+
+Cactus, bamboo, chorus flower, sugar cane, kelp, twisting vines, weeping vines
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet scheduledRandomTickPlants true`
+* Categories: `REMS` , `Feature`,`Survival`
+
+**Ported from：**[OhMyVanillaMinecraft](https://github.com/hit-mc/OhMyVanillaMinecraft)
+
+## KeepWorldTickUpdate
+
+Minecraft will stop updating entities after 300 ticks of no players in the server's current dimension. This rule will bypass this limitation.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet keepWorldTickUpdate true`
+* Categories: `REMS` , `Feature`
+
+## DisableBatCanSpawn
+Stop bats from spawning naturally
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet disableBatCanSpawn true`
+* Categories: `REMS` , `Feature`
+
+## CactusWrenchSound
+Play 'BLOCK_DISPENSER_LAUNCH' sound effect when using the Cactus Wrench.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet cactusWrenchSound true`
+* Categories: `REMS` , `Survival` ,`Creative`
+
+## DisablePortalUpdate
+Nether portal blocks do not react to block updates.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet disablePortalUpdate true`
+* Categories: `REMS` , `Survival` ,`Experimental`
+
+## StringDupeReintroduced<sup>`MC > 1.21.2`</sup>
+Reintroduced the line-stirring feature, and you can continue to use the line-stirring machine through this rule.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet stringDupeReintroduced true`
+* Categories: `REMS` , `Survival` ,`Experimental`
+
+## SharedVillagerDiscounts
+The discount obtained by players who cure zombie villagers into villagers will be shared by all players.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet sharedVillagerDiscounts true`
+* Categories: `REMS` , `Survival`,`Feature`
+
+## SignCommand
+The player right-clicks the sign to execute the command on the sign.The sign starts with /  
+(only say tick and player are allowed)
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet SignCommand true`
+* Categories: `REMS` , `Survival`
+
+## Enderpearlloadchunk
+This ender pearl loading is ported from 1.21.2. Very useful.
+
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet enderpearlloadchunk true`
+* Categories: `REMS` , `FEATURE`
+
+## Pearltime
+This rule controls how many gts the pearl will be destroyed after it exceeds 20m/gt.
+
+* Default Value: `40`
+* Optional Parameters: `40`, `0`
+* Open Method: `/carpet pearltime true`
+* Categories: `REMS` , `FEATURE`
 
 
-**移植自：**[OhMyVanillaMinecraft](https://github.com/hit-mc/OhMyVanillaMinecraft)
+## ItemShadowing
+Reintroduced the logic of swapping between inventory slots in 1.16.5.
 
-## 保持实体更新(KeepWorldTickUpdate)
-在服务器当前维度没有玩家的300tick后，Minecraft会停止实体相关的更新，这条规则会绕过这个限制。
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet keepWorldTickUpdate true`
-* 分类: `REMS` , `Feature`
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet itemShadowing true`
+* Categories: `REMS` , `Experimental`
 
-## 禁止蝙蝠生成(DisableBatCanSpawn)
-阻止蝙蝠自然生成
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet disableBatCanSpawn true`
-* 分类: `REMS` , `Feature`
+**Ported from：**[CrystalCarpetAddition](https://github.com/Crystal0404/CrystalCarpetAddition)
 
-## 仙人掌扳手音效(CactusWrenchSound)
-使用仙人掌扳手时播放 'BLOCK_DISPENSER_LAUNCH' 音效
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet cactusWrenchSound true`
-* 分类: `REMS` , `Survival` ,`Creative`
+## MagicBox<sup>`MC >= 1.20.2`</sup>
+Reintroduced update suppression for type conversions
 
-## 禁止传送门更新(DisablePortalUpdate)
-下界传送门方块收到方块更新后不会做出反应
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet disablePortalUpdate true`
-* 分类: `REMS` , `Survival` ,`Experimental`
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet magicBox true`
+* Categories: `REMS` , `ExperimentalL`
 
-## 重新引入拌线骗特性(StringDupeReintroduced)<sup>`MC > 1.21.2`</sup>
-重新引入拌线骗特性，可以通过此规则来继续使用刷线机
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet stringDupeReintroduced true`
-* 分类: `REMS` , `Survival` ,`Experimental`
-
-## 共享打折(SharedVillagerDiscounts)
-玩家将僵尸村民治疗为村民后的获得的折扣将共享给所有玩家
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet sharedVillagerDiscounts true`
-* 分类: `REMS` , `Survival`,`Feature`
-
-## 命令告示牌(SignCommand)
-玩家右键单击标牌，执行标牌上的命令  
-在告示牌以/开头（只允许say tick和player）
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet SignCommand true`
-* 分类: `REMS` , `Survival`
-
-## 末影珍珠加载(Enderpearlloadchunk)
-这个末影珍珠加载是从1.21.2移植下来的。十分好用
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet enderpearlloadchunk true`
-* 分类: `REMS` , `FEATURE`
-
-## 珍珠加载时间(Pearltime)
-这个规则可以控制珍珠在大于20m/gt后多少gt被销毁
-* 默认值: `40`
-* 可选参数: `40`, `0`
-* 开启方法: `/carpet pearltime true`
-* 分类: `REMS` , `FEATURE`
-
-
-## 物品分身(ItemShadowing)
-重新引入1.16.5物品栏之间交换的逻辑
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet itemShadowing true`
-* 分类: `REMS` , `Experimental`
-
-**移植自：**[CrystalCarpetAddition](https://github.com/Crystal0404/CrystalCarpetAddition)
-
-## CCE抑制器(MagicBox)<sup>`MC >= 1.20.2`</sup>
-重新引入类型转换的更新抑制
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet magicBox true`
-* 分类: `REMS` , `ExperimentalL`
 
 ---

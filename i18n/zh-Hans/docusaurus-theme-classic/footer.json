@@ -1,0 +1,38 @@
+{
+  "link.title.Download": {
+    "message": "下载",
+    "description": "The title of the footer links column with title=Download in the footer"
+  },
+  "link.title.Link": {
+    "message": "联系",
+    "description": "The title of the footer links column with title=Link in the footer"
+  },
+  "link.title.Friend Projects": {
+    "message": "友情项目",
+    "description": "The title of the footer links column with title=Friend Projects in the footer"
+  },
+  "link.item.label.Modrinth": {
+    "message": "Modrinth",
+    "description": "The label of footer link with label=Modrinth linking to https://modrinth.com/mod/rems-carpet-addition"
+  },
+  "link.item.label.Discord": {
+    "message": "REMS Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/MBEJatefbz"
+  },
+  "link.item.label.Github Releases": {
+    "message": "Github Releases",
+    "description": "The label of footer link with label=Github Releases linking to https://github.com/Hure-herd/REMS-Carpet-Addition/releases"
+  },
+  "link.item.label.Github": {
+    "message": "Github",
+    "description": "The label of footer link with label=Github linking to https://github.com/Hure-herd/REMS-Carpet-Addition"
+  },
+  "link.item.label.Crystal Carpet Addition": {
+    "message": "Crystal Carpet Addition",
+    "description": "The label of footer link with label=Crystal Carpet Addition linking to https://crystal0404.github.io/cca-doc/docs/"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 REMS Server, Inc. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
