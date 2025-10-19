@@ -255,5 +255,4 @@ Fixed an issue where ender pearls would unload at high speeds due to being unabl
 * Open Method: `/carpet fixedpearlloading true`
 * Categories: `REMS` , `bugfix`
 
-**Ported from：**[PearlChunkLoading](https://github.com/Crystal0404/PearlChunkLoading)
 ---
