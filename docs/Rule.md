@@ -204,6 +204,8 @@ This ender pearl loading is ported from 1.21.2. Very useful.
 * Optional Parameters: `true`, `false`
 * Open Method: `/carpet enderpearlloadchunk true`
 * Categories: `REMS` , `FEATURE`
+  
+**Ported from：**[PearlChunkLoading](https://github.com/Crystal0404/PearlChunkLoading)
 
 ## Pearltime
 This rule controls how many gts the pearl will be destroyed after it exceeds 20m/gt.
@@ -252,4 +254,6 @@ Fixed an issue where ender pearls would unload at high speeds due to being unabl
 * Optional Parameters: `true`, `false`
 * Open Method: `/carpet fixedpearlloading true`
 * Categories: `REMS` , `bugfix`
+
+**Thanks：**[PearlChunkLoading](https://github.com/Crystal0404/PearlChunkLoading)
 ---
