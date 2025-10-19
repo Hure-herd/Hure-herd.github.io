@@ -10,7 +10,7 @@ sidebar_position: 1
 开启后，当该活塞/黏性活塞头产生活塞头的推出/拉回事件时，在创建推出/拉回事件的那一游戏刻为**活塞头方块所在区块**添加类型为"piston_block"的加载票，持续时间为60gt（3s）。
 #### 在任何维度，活塞上方有钻石矿时可以弱加载1x1的区块
 #### 在地狱下方有基岩，后一格上方是红石火把时可以弱加载1x1的区块
-#### 当有5X5的弱加载区块的时候，最中心的区块会变成强加载区块
+#### 当有3X3的弱加载区块的时候，最中心的区块会变成强加载区块
 * 默认值: `false`
 * 可选参数: `true`, `false`
 * 开启方法: `/carpet pistonBlockChunkLoader ture`
@@ -25,7 +25,7 @@ sidebar_position: 1
 * 开启方法: `/carpet mergeTNTPro true`
 * 分类: `REMS`, `Feature`, `Survival`,`TNT`
 
-## 末影珍珠加载(PearlTickets)<sup>`MC < 1.21.5`</sup>
+## 末影珍珠加载(PearlTickets)<sup>`MC < 1.21.2`</sup>
 这个规则允许末影珍珠实体选择性地加载即将通过的区块，这样珍珠炮打出的珍珠就不会因为进入未加载区块而丢失。在1.14+中可以替代地狱门加载链使用。   
 该mod相比于@gnembon/carpet-extra mod的enderPearlChunkLoading功能有显著的性能提升。  
 (Minecraft>=1.21.2时开启后，可以显著提升珍珠炮的性能)
@@ -180,7 +180,7 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 * 开启方法: `/carpet SignCommand true`
 * 分类: `REMS` , `Survival`
 
-## 末影珍珠加载(Enderpearlloadchunk)
+## 末影珍珠加载(Enderpearlloadchunk)<sup>`MC < 1.21.2`</sup>
 这个末影珍珠加载是从1.21.2移植下来的。十分好用
 * 默认值: `false`
 * 可选参数: `true`, `false`
@@ -211,5 +211,24 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 * 开启方法: `/carpet magicBox true`
 * 分类: `REMS` , `ExperimentalL`
 
+## 重载式刷铁机(Reloadrefreshirongolem)
+你可以像1.14一样在末地建造重载式刷铁机，这个规则可以让他工作
+* 默认值: `false`
+* 可选参数: `true`, `false`
+* 开启方法: `/carpet reloadrefreshirongolem true`
+* 分类: `REMS` , `survival`
 
+## 恢复1.21.2-的投掷物移动顺序(Pre21ThrowableEntityMovement)<sup>`MC >= 1.21.2`</sup>
+恢复1.21.2-的投掷物移动顺序,你可以使用1.21.2-的珍珠炮
+* 默认值: `false`
+* 可选参数: `true`, `false`
+* 开启方法: `/carpet pre21ThrowableEntityMovement true`
+* 分类: `REMS` , `Feature`
+
+## 修复珍珠加载(Fixedpearlloading)<sup>`MC >= 1.21.2`</sup>
+修复了在高速下，末影珍珠会因为无法加载当前区块而卸载
+* 默认值: `false`
+* 可选参数: `true`, `false`
+* 开启方法: `/carpet fixedpearlloading true`
+* 分类: `REMS` , `bugfix`
 ---
