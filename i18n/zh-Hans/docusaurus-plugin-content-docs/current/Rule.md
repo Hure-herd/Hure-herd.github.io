@@ -186,6 +186,7 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 * 可选参数: `true`, `false`
 * 开启方法: `/carpet enderpearlloadchunk true`
 * 分类: `REMS` , `FEATURE`
+**移植自：**[PearlChunkLoading](https://github.com/Crystal0404/PearlChunkLoading)
 
 ## 珍珠加载时间(Pearltime)
 这个规则可以控制珍珠在大于20m/gt后多少gt被销毁
@@ -231,4 +232,5 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 * 可选参数: `true`, `false`
 * 开启方法: `/carpet fixedpearlloading true`
 * 分类: `REMS` , `bugfix`
+**感谢：**[PearlChunkLoading](https://github.com/Crystal0404/PearlChunkLoading)
 ---
