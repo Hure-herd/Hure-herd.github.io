@@ -10,7 +10,7 @@ sidebar_position: 1
 If enabled, when this piston/sticky piston head generates a piston head push/pull event, a load ticket of type "piston_block" is added to the chunk where the piston head block is located at the game tick that created the push/pull event, with a duration of 60gt (3s).
 #### In any dimension, a diamond ore can be weakly loaded into a 1x1 Active chunk above a piston.
 #### If there is bedrock below the netherworld and a redstone torch above the next block, a 1x1 block can be lazy loaded.
-#### When there are 5X5 weak loading chunks, the central chunk will become a Active loading chunk
+#### When there are 3X3 weak loading chunks, the central chunk will become a Active loading chunk
 * Default Value: `false`
 * Optional Parameters: `true`, `false`
 * Open Method: `/carpet pistonBlockChunkLoader ture`
@@ -26,7 +26,7 @@ Merging a large amount of TNT to reduce the lag caused by entities and explosion
 * Open Method: `/carpet mergeTNTPro true`
 * Categories: `REMS`, `Feature`, `Survival`,`TNT`
 
-## PearlTickets<sup>`MC < 1.21.5`</sup>
+## PearlTickets<sup>`MC < 1.21.2`</sup>
 This mod allows ender pearl entities to selectively load chunks that they are about to pass through, so that pearls fired by the pearl cannon will not be lost due to entering unloaded chunks. It can be used instead of the nether portal loading chain in 1.14+.
 This mod has a significant performance improvement over the enderPearlChunkLoading function of @gnembon/carpet-extra mod.  
 (When enabled in Minecraft>=1.21.2, it can significantly improve the performance of the Pearl Cannon)
@@ -232,5 +232,24 @@ Reintroduced update suppression for type conversions
 * Open Method: `/carpet magicBox true`
 * Categories: `REMS` , `ExperimentalL`
 
+## Reloadrefreshirongolem
+You can build a heavy iron spawner in the end like in 1.14, this rule will make it work
+* Default Value:  `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet reloadrefreshirongolem true`
+* Categories: `REMS` , `survival`
 
+## Pre21ThrowableEntityMovement<sup>`MC >= 1.21.2`</sup>
+Restored the order of projectile movement from 1.21.2, you can use EnderPearl Cannon like in 1.21.2-
+* Default Value: `false`
+* Optional Parameters:`true`, `false`
+* Open Method: `/carpet pre21ThrowableEntityMovement true`
+* Categories: `REMS` , `Feature`
+
+## Fixedpearlloading<sup>`MC >= 1.21.2`</sup>
+Fixed an issue where ender pearls would unload at high speeds due to being unable to load the current chunk.
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet fixedpearlloading true`
+* Categories: `REMS` , `bugfix`
 ---
