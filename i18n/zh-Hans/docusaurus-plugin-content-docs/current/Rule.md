@@ -233,6 +233,5 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 * 可选参数: `true`, `false`
 * 开启方法: `/carpet fixedpearlloading true`
 * 分类: `REMS` , `bugfix`
-  
-**感谢：**[PearlChunkLoading](https://github.com/Crystal0404/PearlChunkLoading)
+
 ---
