@@ -255,4 +255,18 @@ Fixed an issue where ender pearls would unload at high speeds due to being unabl
 * Open Method: `/carpet fixedpearlloading true`
 * Categories: `REMS` , `bugfix`
 
+## WanderingTraderNoDisappear
+Wandering Trader will no disappear customName is Load
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet wanderingTraderNoDisappear true`
+* Categories: `REMS` , `feature`
+
+## Pearlnotloadingchunk
+Enderpearl no load any chunk
+* Default Value: `false`
+* Optional Parameters: `true`, `false`
+* Open Method: `/carpet pearlnotloadingchunk true`
+* Categories: `REMS` , `feature`
+
 ---
