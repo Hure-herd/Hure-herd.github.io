@@ -61,15 +61,8 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 
 **移植自：**[EpsilonSMP](https://github.com/EpsilonSMP/Epsilon-Carpet)
 
-## 声音抑制移植(Soundsuppression)<sup>`MC > 1.21.1`</sup>
-将校准幽匿感测体的方块实体数据保留到任何拥有方块数据的方块
-* 默认值: `false`
-* 可选参数: `true`, `false`
-* 开启方法: `/carpet soundsuppression true`
-* 分类: `REMS` , `Feature`
-
 ## 声音抑制器范围控制(SoundSuppressionRadius)<sup>`MC > 1.19.4`</sup>
-控制声音抑制器的监听范围半径，可输入一个正整数，原版默认为16格，最大不能超过32
+控制声音抑制器的监听范围半径，可输入一个正整数，原版默认为16格，最大不能超过64
 * 默认值: `false`
 * 可选参数: `8`,`16`,`32`
 * 开启方法: `/carpet soundSuppressionRadius true`
@@ -206,11 +199,11 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 
 **移植自：**[CrystalCarpetAddition](https://github.com/Crystal0404/CrystalCarpetAddition)
 
-## CCE抑制器(MagicBox)<sup>`MC >= 1.20.2`</sup>
-重新引入类型转换的更新抑制
+## 方块实体替换(Blockentityreplacement)<sup>`MC >= 1.20.2`</sup>
+允许方块实体的保存和替换，用于制作CCE和IAE
 * 默认值: `false`
 * 可选参数: `true`, `false`
-* 开启方法: `/carpet magicBox true`
+* 开启方法: `/carpet blockentityreplacement true`
 * 分类: `REMS` , `ExperimentalL`
 
 ## 重载式刷铁机(Reloadrefreshirongolem)
@@ -233,5 +226,19 @@ SunnySlopes 的[PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 * 可选参数: `true`, `false`
 * 开启方法: `/carpet fixedpearlloading true`
 * 分类: `REMS` , `bugfix`
+
+## 流商不消失(WanderingTraderNoDisappear)
+名字是Load的流浪商人不会消失
+* 默认值: `false`
+* 可选参数: `true`, `false`
+* 开启方法: `/carpet wanderingTraderNoDisappear true`
+* 分类: `REMS` , `feature`
+
+## 珍珠不加载(Pearlnotloadingchunk)
+珍珠不加载任何区块
+* 默认值: `false`
+* 可选参数: `true`, `false`
+* 开启方法: `/carpet pearlnotloadingchunk true`
+* 分类: `REMS` , `feature`
 
 ---
