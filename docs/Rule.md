@@ -39,15 +39,8 @@ This mod has a significant performance improvement over the enderPearlChunkLoadi
 **Ported from：**
 SunnySlopes's [PearlTickets](https://github.com/SunnySlopes/PearlTickets)
 
-## Soundsuppression<sup>`MC > 1.21.1`</sup>
-Keep the block entity data of the calibrated hidden sensor to any blcok that is blockentity
-* Default Value: `false`
-* Optional Parameters: `true`, `false`
-* Open Method: `/carpet soundsuppression true`
-* Categories: `REMS` , `Feature`
-
 ## SoundSuppressionRadius<sup>`MC > 1.19.4`</sup>
-Controls the monitoring radius of the sound suppressor. You can enter a positive integer. The default value in the original version is 16 grids.The maximum value cannot exceed 32.
+Controls the monitoring radius of the sound suppressor. You can enter a positive integer. The default value in the original version is 16 grids.The maximum value cannot exceed 64.
 * Default Value:  `false`
 * Optional Parameters: `8`,`16`,`32`
 * Open Method: `/carpet soundSuppressionRadius true`
@@ -226,12 +219,12 @@ Reintroduced the logic of swapping between inventory slots in 1.16.5.
 
 **Ported from：**[CrystalCarpetAddition](https://github.com/Crystal0404/CrystalCarpetAddition)
 
-## MagicBox<sup>`MC >= 1.20.2`</sup>
-Reintroduced update suppression for type conversions
+## Blockentityreplacement<sup>`MC >= 1.20.2`</sup>
+Allows saving and replacing of block entities, used for creating CCE and IAE.
 
 * Default Value: `false`
-* Optional Parameters: `true`, `false`
-* Open Method: `/carpet magicBox true`
+* Optional Parameters:  `true`, `false`
+* Open Method: `/carpet blockentityreplacement true`
 * Categories: `REMS` , `ExperimentalL`
 
 ## Reloadrefreshirongolem
