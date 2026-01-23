@@ -10,11 +10,10 @@ const commonSidebarConfig = {
 }
 
 export default defineConfig({
-  base: '/',
   title: "Hureherd Blog",
   description: "Minecraft Mod开发与技术笔记",
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }]
+      ['link', { rel: 'icon', href: '/logo.png' }]
   ],
   themeConfig: {
     nav: [
