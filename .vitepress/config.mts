@@ -13,13 +13,11 @@ export default defineConfig({
   base: '/',
   title: "Hureherd Blog",
   description: "Minecraft Mod开发与技术笔记",
-
-head: [
+  head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
 
  themeConfig: {
-    logo: '/logo.png',
     nav: [
       { text: '首页', link: '/' },
         {
