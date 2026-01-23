@@ -16,7 +16,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }]
   ],
- themeConfig: {
+  themeConfig: {
     nav: [
       { text: '首页', link: '/' },
         {
