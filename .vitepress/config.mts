@@ -10,7 +10,7 @@ const commonSidebarConfig = {
 }
 
 export default defineConfig({
-  base: '/',
+  base: '/Hure-herd.github.io/',
   title: "Hureherd Blog",
   description: "Minecraft Mod开发与技术笔记",
 
