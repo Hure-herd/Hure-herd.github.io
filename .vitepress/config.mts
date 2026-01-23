@@ -14,6 +14,10 @@ export default defineConfig({
   title: "Hureherd Blog",
   description: "Minecraft Mod开发与技术笔记",
 
+head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
+
  themeConfig: {
     nav: [
       { text: '首页', link: '/' },
