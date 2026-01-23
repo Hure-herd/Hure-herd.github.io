@@ -11,7 +11,7 @@ hero:
       link: /posts/mc/index.md
     - theme: brand
       text: 📺 Bilibili个人主页
-      link: https://github.com/Hure-herd
+      link: https://space.bilibili.com/59393173
     - theme: brand
       text: ⌨️ Discord
       link: https://discord.gg/aXSnfFtaKP
